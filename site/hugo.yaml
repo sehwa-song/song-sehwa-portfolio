@@ -731,12 +731,13 @@ params:
     #   messageCaption: "Enter your message here"
     #   messageRows: 5
 
+  copyright: "송세화"
   footer:
     recentPosts:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: true
+      enable: false
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/sehwa-song
