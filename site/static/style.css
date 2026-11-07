@@ -261,3 +261,36 @@ body.dark #about {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+/* Header wordmark: monochrome and scoped to the existing home link. */
+#profileHeader .site-brand {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.625rem;
+    padding: 0.2rem 0;
+    color: var(--text-color) !important;
+    opacity: 1;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+#profileHeader .site-brand-symbol {
+    font-size: 2.125rem;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+}
+
+#profileHeader .site-brand-label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    line-height: 1.2;
+    opacity: 0.75;
+}
+
+#profileHeader .site-brand:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 6px;
+    border-radius: 0.25rem;
+}
