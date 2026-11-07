@@ -208,7 +208,7 @@ languages:
             content: Contribuí a un proyecto de código abierto.
             url: https://example.com
       contact:
-        content: Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré todo lo posible para responderte!
+        content: Puedes consultar mis proyectos y mi actividad de desarrollo mediante los enlaces a GitHub en la parte superior o inferior de la página.
         btnName: Escríbeme
   fr:
     contentDir: "content/fr"
@@ -404,7 +404,7 @@ languages:
             content: J'ai contribué à un projet open source.
             url: https://example.com
       contact:
-        content: Ma boîte de réception est toujours ouverte. Que vous ayez une question ou que vous vouliez simplement dire bonjour, je ferai de mon mieux pour vous répondre!
+        content: Vous pouvez consulter mes projets et mon activité de développement via les liens GitHub en haut ou en bas de la page.
         btnName: Écrivez-moi
 
 outputs:
@@ -719,7 +719,7 @@ params:
   contact:
     enable: true
     title: "연락처"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    content: "프로젝트와 개발 활동은 페이지 상단 또는 하단의 GitHub 링크에서 확인하실 수 있습니다."
     btnName: Mail me
     btnLink: ""
     # formspree:
