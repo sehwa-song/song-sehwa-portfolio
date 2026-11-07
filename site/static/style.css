@@ -295,3 +295,17 @@ body.dark #about {
     outline-offset: 6px;
     border-radius: 0.25rem;
 }
+
+/* Quiet copyright styling, scoped to the footer. */
+footer .portfolio-copyright {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    color: var(--text-secondary-color);
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+footer .portfolio-copyright p {
+    margin: 0;
+}
