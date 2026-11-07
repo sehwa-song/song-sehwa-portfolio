@@ -712,10 +712,8 @@ params:
     items:
       - title: A2A Agent Company
         content: >-
-          전북대 산학협력 캡스톤
-          A2A 기반 다중 AI 에이전트 협업형 소프트웨어 회사 개발
-          역할: 웹 애플리케이션·데모 개발
-          기술: React · FastAPI · SQLite · JWT
+          전북대학교 산학협력 캡스톤 프로젝트
+          다중 AI 에이전트가 협업하는 가상 소프트웨어 회사를 개발하는 프로젝트입니다.
         image: /images/projects/a2a-main.png
         featured:
           name: "상세 보기"
@@ -733,9 +731,7 @@ params:
       - title: TripPups
         content: >-
           모두의 창업 참여 프로젝트
-          강원도 관광 중심 스와이프형 여행 플랫폼
-          역할: 서비스 개발 참여
-          성과: 모두의 창업 2차 진출
+          스와이프 방식으로 여행지를 탐색하는 강원도 중심 여행 플랫폼입니다.
         image: /images/projects/trippups-main.png
         featured:
           name: "상세 보기"
