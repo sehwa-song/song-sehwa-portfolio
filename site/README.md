@@ -51,6 +51,22 @@
 
 두 프로젝트 모두 개발 진행 중이며, 확인되지 않은 기능을 완료된 기능으로 소개하지 않습니다.
 
+### 주요 구현 기능
+
+| 기능 | 구현 내용 |
+| --- | --- |
+| Hero 그라데이션 | 라이트 모드의 밝은 블루·화이트와 다크 모드의 네이비·블루 배경 |
+| 미니멀한 브랜드 헤더 | 모노톤 기하학 심볼과 작은 `PORTFOLIO` 텍스트, 기존 메뉴·검색·언어·테마 전환 유지 |
+| 카드형 자기소개 | 관심 분야, 학습 목표·실행 계획, 기술 적용 경험을 구분하고 기술 역량을 카드로 표현 |
+| 카드형 프로젝트 상세 페이지 | 활동 정보, 담당 역할, 이용 흐름과 성과를 카드로 구분하고 섹션 간격·구분선·표·사진 캡션 정리 |
+| 프로젝트 카드 Hover | 은은한 테두리 하이라이트와 약한 그림자 |
+| 마우스 반응형 3D Tilt·Glow | 두 메인 카드에 최대 4도 기울기와 포인터를 따라가는 반사광 적용, 마우스를 떼면 원상 복원 |
+| 한국어 404 페이지 | 한국어 오류 안내와 홈 이동 버튼 |
+| 이미지 경로 호환성 | `relURL` 기반 이미지 경로 처리로 로컬과 GitHub Pages의 `/song-sehwa-portfolio/` 하위 경로 지원 |
+| 프로젝트 목록 복귀 버튼 | 두 상세 페이지에서 메인 Projects 영역으로 돌아가는 공통 버튼 |
+
+3D 카드 인터랙션은 `requestAnimationFrame`으로 갱신하며 외부 애니메이션 라이브러리를 사용하지 않습니다. 모바일 터치 환경과 `prefers-reduced-motion` 설정에서는 Tilt와 반사광을 비활성화합니다. 카드의 레이아웃 크기·배치와 상세 보기·GitHub 링크를 유지합니다.
+
 <a id="tech-stack"></a>
 
 ## 3. 사용 기술
@@ -60,12 +76,16 @@
 | 기술 | 용도 |
 | --- | --- |
 | Hugo v0.169.0 Extended | 확인된 로컬 개발 환경의 정적 사이트 생성기 |
-| HTML · CSS · JavaScript | 테마 템플릿, 사이트 스타일 및 인터랙션 |
+| HTML · Hugo 템플릿 | 사이트 오버라이드에서 헤더 브랜드, 자기소개, 프로젝트 카드와 404 페이지 구조 구성 |
+| CSS | `site/static/style.css`에서 시스템 글꼴, 그라데이션, 카드·표·사진 캡션·복귀 버튼과 반응형 라이트·다크 스타일 구현 |
+| JavaScript | `site/static/js/project-tilt.js`에서 포인터 위치를 읽고 `requestAnimationFrame`으로 카드 기울기와 반사광 위치 갱신 |
 | Markdown · YAML | 프로젝트 상세 콘텐츠 및 사이트 설정 |
 | Git · GitHub | 소스 버전 관리 및 저장소 운영 |
 | GitHub Actions · GitHub Pages | 자동 빌드 및 정적 사이트 배포 |
 
 현재 배포 워크플로는 **Hugo Extended v0.143.0**을 사용합니다. 로컬에서 확인한 버전과 배포 환경의 버전을 구분합니다.
+
+커스텀 디자인은 [공통 CSS](static/style.css)에 모아 기존 테마 스타일을 필요한 영역에만 덮어씁니다. [카드 인터랙션 스크립트](static/js/project-tilt.js)는 Projects 템플릿 오버라이드에서 `relURL`을 사용해 연결하며, 해당 영역이 있는 메인 화면에서 불러옵니다. 기울기·반사광은 두 프로젝트 카드에만 적용하고 터치·모션 감소 설정을 확인합니다.
 
 ### 소개하는 프로젝트의 기술
 
@@ -83,14 +103,22 @@
 | `site/hugo.yaml` | 사이트 정보, 자기소개 및 프로젝트 카드 등 설정 |
 | `site/pages.json` | 배포 주소 및 테마 등 병합 설정 |
 | `site/content/` | A2A Agent Company와 TripPups 등 Markdown 콘텐츠 |
-| `site/static/` | 프로필·프로젝트 이미지, CSS 등 정적 파일 |
-| `site/layouts/` | 헤더, 자기소개, 이미지 경로, 404 페이지 등의 테마 오버라이드 |
+| `site/static/images/` | 프로필·프로젝트 대표 이미지와 활동 사진 등 정적 이미지 |
+| `site/static/style.css` | 그라데이션, 글꼴, 헤더·자기소개·프로젝트·Footer 등 커스텀 디자인과 반응형 스타일 |
+| `site/static/js/project-tilt.js` | 메인 프로젝트 카드의 3D Tilt·Glow 및 포인터·모션 설정 처리 |
+| `site/layouts/` | 원본 테마를 직접 수정하지 않고 적용하는 템플릿 오버라이드 |
+| `site/layouts/partials/sections/header.html` | 모노톤 심볼과 `PORTFOLIO` 브랜드, 기존 헤더 기능 유지 |
+| `site/layouts/partials/sections/hero/index.html` | Hero 이미지의 하위 경로 처리 |
+| `site/layouts/partials/sections/about.html` | 카드형 자기소개 구성 |
+| `site/layouts/partials/sections/projects.html` | 프로젝트 카드 이미지 경로 처리와 Tilt 스크립트 연결 |
+| `site/layouts/partials/sections/footer/` | Footer 저작권 표시와 최근 게시물 참조 처리 |
+| `site/layouts/404.html` | 한국어 오류 안내와 홈 이동 기능 |
 | `site/themes/template/` | Hugo Profile 원본 테마 |
 | `.github/workflows/hugo-pages.yml` | GitHub Pages 자동 배포 워크플로 |
 | `.github/pages_build.py` | 배포 빌드 및 하위 경로 처리 스크립트 |
 | `exampleSite/` | 원본 예제 사이트 |
 
-실제 포트폴리오는 `site/`를 사용합니다. 원본 테마를 직접 수정하는 대신 사이트의 `layouts/`와 정적 CSS를 활용해 디자인과 경로 처리를 적용합니다.
+실제 포트폴리오는 `site/`를 사용합니다. 원본 테마를 직접 수정하는 대신 사이트의 `layouts/`와 정적 CSS·JavaScript를 활용해 디자인, 인터랙션과 경로 처리를 적용합니다. 프로젝트 상세 페이지의 카드 구조는 `site/content/`의 Markdown 안에 HTML을 함께 작성하고, 공통 CSS를 재사용합니다.
 
 <a id="installation-and-run"></a>
 
@@ -153,9 +181,17 @@ hugo --source site --config hugo.yaml,pages.json
 | [Hugo Profile](https://github.com/gurusabarish/hugo-profile) | 정적 포트폴리오의 기본 테마와 레이아웃 |
 | [Perry Wang 포트폴리오](https://www.perryw.ca/) | 미니멀한 다크 UI와 타이포그래피의 디자인 참고 |
 
-Hugo Profile의 기본 구조를 활용하면서 시스템 산세리프 글꼴, 은은한 Hero 그라데이션, 자기소개 구성, 미니멀한 헤더 브랜드 등을 개인 포트폴리오에 맞게 조정했습니다.
+Hugo Profile의 기본 구조를 활용하면서 다음 요소를 개인 포트폴리오에 맞게 구성했습니다.
+
+- 시스템 산세리프 글꼴과 은은한 Hero 그라데이션
+- 독창적인 기하학 심볼과 `PORTFOLIO` 텍스트를 조합한 모노톤 브랜드 헤더
+- 실제 관심 분야와 개발 경험을 구분하는 카드형 자기소개 및 프로젝트 상세 페이지
+- 차콜·실버와 블루 포인트를 활용한 카드, 표, 캡션과 목록 복귀 버튼
+- 과도한 확대 없이 최대 4도로 제한한 카드 Tilt와 부드러운 반사광
 
 Perry Wang 포트폴리오의 미니멀한 다크 UI와 타이포그래피 분위기를 참고하되, 실제 구성과 표현은 개인 개발자 포트폴리오에 맞게 독자적으로 각색했습니다.
+
+참고 사이트의 원본 디자인이나 이미지·소스코드를 그대로 복제하는 방식 대신, 실제 프로젝트 콘텐츠에 맞춘 정보 구조와 스타일로 구성했습니다. 라이트 모드와 모바일 배치도 함께 지원합니다.
 
 <a id="license-and-attribution"></a>
 
