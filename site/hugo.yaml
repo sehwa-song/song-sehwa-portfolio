@@ -723,7 +723,7 @@ params:
           서비스 주제: 강원도 관광을 중심으로 스와이프 방식으로 관광지와 여행지를 탐색하는 여행 플랫폼.
           담당 역할: 개발 참여.
           프로젝트 현황: 모두의 창업 2차 진출, 서비스 개발 진행 중.
-        image: /images/hero.svg
+        image: /images/projects/trippups-main.png
         featured:
           name: "상세 보기"
           link: "/song-sehwa-portfolio/projects/trippups/"
