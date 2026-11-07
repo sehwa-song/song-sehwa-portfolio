@@ -310,6 +310,191 @@ footer .portfolio-copyright p {
     margin: 0;
 }
 
+/* A2A detail: the wrapper keeps these styles off other project pages. */
+#single .col-lg-6:has(.a2a-detail) {
+    width: 100%;
+    max-width: 1040px;
+}
+
+.a2a-detail {
+    --a2a-card: #f5f7fa;
+    --a2a-border: #dce2e9;
+    --a2a-accent: #3568a2;
+    --a2a-muted: #596575;
+    color: var(--text-color);
+}
+
+body.dark .a2a-detail {
+    --a2a-card: #20242b;
+    --a2a-border: #353d48;
+    --a2a-accent: #9bbce4;
+    --a2a-muted: #b0bac7;
+}
+
+#single .a2a-detail h2 {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    color: var(--text-color) !important;
+    opacity: 1;
+}
+
+#single .a2a-detail > h2:first-child {
+    margin-top: 0;
+}
+
+#single .a2a-detail h3,
+#single .a2a-detail h4 {
+    color: var(--text-color) !important;
+    font-size: 1.05rem;
+    opacity: 1;
+}
+
+#single .a2a-detail .a2a-statement {
+    margin: 1.25rem 0;
+    font-size: clamp(1.65rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.035em;
+}
+
+.a2a-detail .a2a-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.a2a-detail .a2a-panel {
+    min-width: 0;
+    padding: 1.4rem;
+    border: 1px solid var(--a2a-border);
+    border-radius: 1rem;
+    background: var(--a2a-card);
+    font-size: 0.9375rem;
+    line-height: 1.75;
+}
+
+.a2a-detail .a2a-meta strong,
+.a2a-detail .a2a-label,
+.a2a-detail .a2a-note,
+.a2a-detail .a2a-step {
+    display: block;
+}
+
+.a2a-detail .a2a-label,
+.a2a-detail .a2a-note {
+    color: var(--a2a-muted);
+    font-size: 0.8125rem;
+}
+
+.a2a-detail .a2a-label,
+.a2a-detail .a2a-step {
+    margin-bottom: 0.65rem;
+}
+
+.a2a-detail .a2a-note {
+    margin-top: 0.5rem;
+}
+
+.a2a-detail .a2a-accent,
+.a2a-detail .a2a-step {
+    color: var(--a2a-accent);
+    font-weight: 600;
+}
+
+.a2a-detail .a2a-step {
+    font-size: 0.8125rem;
+}
+
+.a2a-detail .a2a-panel p:last-child,
+.a2a-detail .a2a-panel dl,
+.a2a-detail .a2a-panel dd:last-child {
+    margin-bottom: 0;
+}
+
+.a2a-detail .a2a-panel dt {
+    margin-top: 1rem;
+    color: var(--a2a-muted);
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+#single .a2a-detail .a2a-flow,
+#single .a2a-detail .a2a-troubleshooting,
+#single .a2a-detail .a2a-badges {
+    padding: 0;
+    list-style: none;
+    opacity: 1;
+}
+
+#single .a2a-detail .a2a-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 1.25rem 0;
+}
+
+.a2a-detail .a2a-badges li {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--a2a-border);
+    border-radius: 2rem;
+    background: var(--a2a-card);
+    color: var(--a2a-accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.a2a-detail .a2a-results {
+    overflow-x: auto;
+    border: 1px solid var(--a2a-border);
+    border-radius: 1rem;
+    margin-top: 1.25rem;
+}
+
+#single .a2a-detail .a2a-results table {
+    display: table;
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    opacity: 1;
+}
+
+#single .a2a-detail .a2a-results table tr > th,
+#single .a2a-detail .a2a-results table tr > td {
+    padding: 1rem !important;
+    border: 0;
+    border-bottom: 1px solid var(--a2a-border);
+    color: var(--text-color) !important;
+    background: var(--a2a-card) !important;
+    vertical-align: top;
+    opacity: 1;
+}
+
+#single .a2a-detail .a2a-results table tr > th {
+    color: var(--a2a-accent) !important;
+    font-weight: 600;
+}
+
+#single .a2a-detail .a2a-results tbody tr:last-child > td {
+    border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .a2a-detail .a2a-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
+    .a2a-detail .a2a-meta,
+    .a2a-detail .a2a-roles,
+    .a2a-detail .a2a-flow {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 /* Project hover accents do not change card or image geometry. */
 #projects {
     --project-hover-border: rgba(111, 145, 181, 0.48);
