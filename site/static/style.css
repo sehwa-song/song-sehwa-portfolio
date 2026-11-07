@@ -616,11 +616,19 @@ body.dark #single .page-content .a2a-detail table {
 #projects {
     --project-hover-border: rgba(111, 145, 181, 0.48);
     --project-hover-shadow: rgba(49, 75, 105, 0.09);
+    --project-reflection: rgba(207, 227, 255, 0.24);
+    --project-reflection-core: rgba(255, 255, 255, 0.3);
 }
 
 body.dark #projects {
     --project-hover-border: rgba(149, 177, 211, 0.5);
     --project-hover-shadow: rgba(72, 112, 166, 0.12);
+    --project-reflection: rgba(132, 176, 231, 0.12);
+    --project-reflection-core: rgba(220, 233, 249, 0.14);
+}
+
+#projects .project-tilt-region {
+    position: relative;
 }
 
 #projects .card,
@@ -638,6 +646,32 @@ body.dark #projects {
     border-radius: inherit;
     pointer-events: none;
     transition: border-color 0.25s ease;
+}
+
+#projects .card.project-tilt::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--tilt-light-x, 50%) var(--tilt-light-y, 50%), var(--project-reflection-core), var(--project-reflection) 18%, transparent 65%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+#projects .card.project-tilt::after {
+    z-index: 2;
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    #projects .card.project-tilt {
+        transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    }
+
+    #projects .card.project-tilt.is-tilting::before {
+        opacity: 1;
+    }
 }
 
 #projects .card .card-img-top,
@@ -659,6 +693,7 @@ body.dark #projects {
 @media (prefers-reduced-motion: reduce) {
     #projects .card,
     #projects .card:hover,
+    #projects .card.project-tilt::before,
     #projects .card::after {
         transition: none;
     }
