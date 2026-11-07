@@ -717,6 +717,9 @@ params:
           담당 역할: 개발 참여.
           프로젝트 현황: 모두의 창업 2차 진출, 서비스 개발 진행 중.
         image: /images/hero.svg
+        featured:
+          name: "상세 보기"
+          link: "/song-sehwa-portfolio/projects/trippups/"
 
   #Contact
   contact:
