@@ -710,7 +710,7 @@ params:
     enable: true
     title: "프로젝트"
     items:
-      - title: A2A Agent Company
+      - title: 🤖 A2A Agent Company
         content: >-
           전북대학교 산학협력 캡스톤 프로젝트
           다중 AI 에이전트가 협업하는 가상 소프트웨어 회사를 개발하는 프로젝트입니다.
@@ -728,7 +728,7 @@ params:
           - icon: fab fa-github
             url: https://github.com/jooho-le/A2A-agent-company
 
-      - title: TripPups
+      - title: 🐾 TripPups
         content: >-
           모두의 창업 참여 프로젝트
           스와이프 방식으로 여행지를 탐색하는 강원도 중심 여행 플랫폼입니다.

@@ -9,7 +9,7 @@ draft: false
 
 <div class="a2a-detail trippups-detail">
 
-## 활동 시기와 진행 상태
+## 📌 활동 시기와 진행 상태 {#활동-시기와-진행-상태}
 
 <div class="a2a-grid a2a-meta">
 <div class="a2a-panel"><span class="a2a-label">참여 프로그램</span><strong>모두의 창업</strong></div>
@@ -17,13 +17,13 @@ draft: false
 <div class="a2a-panel"><span class="a2a-label">진행 상태</span><strong class="a2a-accent">서비스 개발 진행 중</strong></div>
 </div>
 
-## 서비스 개발 목적
+## 🗺️ 서비스 개발 목적 {#서비스-개발-목적}
 
 <p class="a2a-statement">스와이프로 만나는<br>강원도의 여행지.</p>
 
 TripPups는 스와이프 방식으로 여행지와 관광지를 탐색하는 여행 플랫폼 개발을 목표로 합니다. 강원도를 주요 대상 지역으로 삼아, 여행자가 여러 관광지와 여행 후보지를 차례로 살펴보는 탐색 경험을 제공하고자 합니다.
 
-## 담당 역할
+## 👩‍💻 담당 역할 {#담당-역할}
 
 <div class="a2a-panel">
 <span class="a2a-label">참여 역할</span>
@@ -35,7 +35,7 @@ TripPups는 스와이프 방식으로 여행지와 관광지를 탐색하는 여
 
 현재 강원도 관광지와 여행지를 중심으로 정보를 구성하고, 스와이프 동작을 활용하는 서비스 이용 방식을 기획하며 개발을 진행하고 있습니다.
 
-### 기획 중인 이용 흐름
+### 👆 기획 중인 이용 흐름 {#기획-중인-이용-흐름}
 
 아래 내용은 **기획 중인 서비스 이용 방식**이며, 기능별 구현 완료 여부는 확인되지 않았습니다.
 
@@ -54,7 +54,7 @@ TripPups는 스와이프 방식으로 여행지와 관광지를 탐색하는 여
 </li>
 </ol>
 
-## 산출물과 진행 성과
+## 🏆 산출물과 진행 성과 {#산출물과-진행-성과}
 
 <div class="a2a-grid">
 <div class="a2a-panel">
@@ -70,7 +70,7 @@ TripPups는 스와이프 방식으로 여행지와 관광지를 탐색하는 여
 </div>
 </div>
 
-## 활동 사진
+## 📸 활동 사진 {#활동-사진}
 
 <aside class="aboutImg text-center">
 
