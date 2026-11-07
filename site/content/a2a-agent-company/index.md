@@ -46,4 +46,4 @@ A2A Agent Company는 전북대학교 산학협력 캡스톤 프로젝트입니�
 
 [A2A Agent Company GitHub 저장소](https://github.com/jooho-le/A2A-agent-company)
 
-[메인 화면의 프로젝트 영역으로 돌아가기](../../#projects)
+[← 프로젝트 목록으로 돌아가기]({{< relref "/" >}}#projects)
