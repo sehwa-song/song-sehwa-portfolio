@@ -562,13 +562,11 @@ params:
       enable: true
       title: "프로젝트에서 사용한 기술입니다:"
       items:
-        - "React"
-        - "Vite"
-        - "FastAPI"
-        - "SQLite"
-        - "JWT"
-        - "Git"
-        - "GitHub"
+        - "**프론트엔드:** React, Vite"
+        - "**백엔드:** FastAPI"
+        - "**데이터베이스:** SQLite"
+        - "**인증:** JWT"
+        - "**개발 및 협업 도구:** Git, GitHub"
 
   # Experience
   experience:
