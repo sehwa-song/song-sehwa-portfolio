@@ -53,6 +53,16 @@ A2A Agent Company는 A2A 기반 다중 AI 에이전트 협업형 가상 소프�
 | 웹 애플리케이션 및 데모 | 프론트엔드와 API 구현 결과를 바탕으로 개발 지속 | 개발 진행 중 |
 | 에이전트 간 실제 연동 및 전체 E2E 통합 | 완료 여부는 확인되지 않음 | 통합 완료 여부 미확인 |
 
+## 활동 사진
+
+<aside class="aboutImg text-center">
+
+![A2A Agent Company 캡스톤 프로젝트 활동 사진]({{< relref "/" >}}images/projects/a2a-activity-01.jpeg)
+
+A2A Agent Company 캡스톤 프로젝트 활동 사진
+
+</aside>
+
 ## 학습 결과와 개선 방향
 
 프론트엔드·백엔드·데이터베이스·인증이 연결되는 웹서비스 구조를 이해했습니다. HTTP 401 오류를 해결하며 API 응답, 토큰 발급 상태와 요청 시 인증 설정을 함께 점검하는 경험을 쌓았습니다.
