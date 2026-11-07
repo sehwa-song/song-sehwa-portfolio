@@ -495,6 +495,51 @@ body.dark .a2a-detail {
     }
 }
 
+/* Shared return link for the two project detail pages. */
+#single .a2a-detail .project-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--a2a-muted);
+    border-radius: 0.75rem;
+    background-color: var(--a2a-card);
+    color: var(--text-color) !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+#single .a2a-detail .project-back-link > span:first-child {
+    flex-shrink: 0;
+}
+
+#single .a2a-detail .project-back-link::after {
+    display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #single .a2a-detail .project-back-link:hover {
+        background-color: var(--a2a-border);
+        border-color: var(--a2a-accent);
+    }
+}
+
+#single .a2a-detail .project-back-link:focus-visible {
+    outline: 2px solid var(--a2a-accent);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #single .a2a-detail .project-back-link {
+        transition: none;
+    }
+}
+
 /* Project hover accents do not change card or image geometry. */
 #projects {
     --project-hover-border: rgba(111, 145, 181, 0.48);

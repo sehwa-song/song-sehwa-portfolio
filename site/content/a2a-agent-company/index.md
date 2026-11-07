@@ -135,6 +135,6 @@ A2A Agent Company 캡스톤 프로젝트 활동 사진
 
 [A2A Agent Company GitHub 저장소](https://github.com/jooho-le/A2A-agent-company)
 
-[← 프로젝트 목록으로 돌아가기]({{< relref "/" >}}#projects)
+<a class="project-back-link" href="{{< relref "/" >}}#projects"><span aria-hidden="true">←</span><span>프로젝트 목록으로 돌아가기</span></a>
 
 </div>

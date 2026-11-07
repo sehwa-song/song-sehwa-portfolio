@@ -86,6 +86,6 @@ TripPups 창업 프로젝트 활동 사진
 
 **향후 계획:** 기획한 탐색 방식에 필요한 기능 구현을 이어가고, 사용자가 관광지 정보를 살펴본 뒤 스와이프로 다음 장소를 탐색하는 이용 흐름이 자연스럽게 이어지는지 검증할 계획입니다.
 
-[← 프로젝트 목록으로 돌아가기]({{< relref "/" >}}#projects)
+<a class="project-back-link" href="{{< relref "/" >}}#projects"><span aria-hidden="true">←</span><span>프로젝트 목록으로 돌아가기</span></a>
 
 </div>
