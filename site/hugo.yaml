@@ -13,33 +13,13 @@ languages:
     weight: 1
     contentDir: "content"
     menu:
-      main:
-        - identifier: blog
-          name: Blog
-          title: Blog posts
-          url: /blogs
-          weight: 1
-        - identifier: gallery
-          name: Gallery
-          title: Image gallery
-          url: /gallery
-          weight: 2
+      main: []
   es:
     languageName: "Español"
     weight: 2
     contentDir: "content/es"
     menu:
-      main:
-        - identifier: blog
-          name: Blog
-          title: Publicaciones del blog
-          url: /es/blogs
-          weight: 1
-        - identifier: gallery
-          name: Galería
-          title: Galería de imágenes
-          url: /es/gallery
-          weight: 2
+      main: []
     params:
       hero:
         intro: "Hola, mi nombre es"
@@ -235,17 +215,7 @@ languages:
     languageName: "Français"
     weight: 3
     menu:
-      main:
-        - identifier: blog
-          name: Blog
-          title: Articles de blog
-          url: /fr/blogs
-          weight: 1
-        - identifier: gallery
-          name: Galerie
-          title: Galerie d'images
-          url: /fr/gallery
-          weight: 2
+      main: []
     params:
       hero:
         intro: "Bonjour, je m'appelle"
@@ -463,12 +433,7 @@ markup:
       unsafe: true
 
 Menus:
-  main:
-    - identifier: gallery
-      name: Gallery
-      title: Gallery
-      url: /gallery
-      weight: 2
+  main: []
     #Dropdown menu
     # - identifier: dropdown
     #   title: Example dropdown menu
