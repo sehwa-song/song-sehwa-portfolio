@@ -453,8 +453,8 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Hugo Profile"
-  description: Text about my cool site
+  title: "송세화 | 개발 포트폴리오"
+  description: "전북대학교 컴퓨터인공지능학부 송세화의 개발 포트폴리오입니다. A2A Agent Company와 TripPups 프로젝트를 통해 웹서비스 및 AI 기반 서비스 개발 경험을 소개합니다."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
