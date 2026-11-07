@@ -457,6 +457,7 @@ params:
   description: "전북대학교 컴퓨터인공지능학부 송세화의 개발 포트폴리오입니다. A2A Agent Company와 TripPups 프로젝트를 통해 웹서비스 및 AI 기반 서비스 개발 경험을 소개합니다."
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
+  customCSS: true
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.

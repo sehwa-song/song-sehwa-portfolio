@@ -1,0 +1,12 @@
+#hero {
+    background-color: var(--background-color);
+    background-image:
+        radial-gradient(ellipse 75% 65% at 85% 25%, rgba(81, 151, 255, 0.18), rgba(81, 151, 255, 0) 75%),
+        radial-gradient(ellipse 70% 60% at 10% 80%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 75%);
+}
+
+body.dark #hero {
+    background-image:
+        radial-gradient(ellipse 75% 65% at 85% 25%, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0) 75%),
+        radial-gradient(ellipse 75% 80% at 10% 45%, rgba(15, 32, 67, 0.72), rgba(15, 32, 67, 0) 85%);
+}
