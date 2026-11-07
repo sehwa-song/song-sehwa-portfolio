@@ -10,3 +10,57 @@ body.dark #hero {
         radial-gradient(ellipse 75% 65% at 85% 25%, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0) 75%),
         radial-gradient(ellipse 75% 80% at 10% 45%, rgba(15, 32, 67, 0.72), rgba(15, 32, 67, 0) 85%);
 }
+
+/* Use system fonts for Korean and Latin text without changing icon fonts. */
+body,
+.primary-font, #primary-font,
+.secondary-font, #secondary-font,
+.default-font, #default-font,
+button, input, select, textarea {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", "Malgun Gothic", "Noto Sans", Arial, sans-serif !important;
+}
+
+body {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+#hero h1 {
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+#hero h2 {
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+#about .content,
+#education .education-content,
+#projects .card-text,
+#single .page-content {
+    line-height: 1.75;
+}
+
+/* The Skills label is a text node inside About; keep paragraphs regular. */
+#about .content,
+#about .content strong {
+    font-weight: 600;
+}
+
+#about .content > p,
+#about .content > ul {
+    font-weight: 400;
+}
+
+#single .page-content h2,
+#single .page-content h3,
+#single .page-content h4 {
+    line-height: 1.4;
+}
