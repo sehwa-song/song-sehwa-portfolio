@@ -342,6 +342,42 @@ body.dark .a2a-detail {
     margin-top: 0;
 }
 
+/* Section rhythm shared by A2A and TripPups; card spacing stays intact. */
+#single .a2a-detail > h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--a2a-border);
+}
+
+#single .a2a-detail > h2:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+#single .a2a-detail > h3 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    #single .a2a-detail > h2 {
+        margin-top: 3.5rem;
+        margin-bottom: 1.25rem;
+        padding-top: 2rem;
+    }
+
+    #single .a2a-detail > h2:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #single .a2a-detail > h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
 #single .a2a-detail h3,
 #single .a2a-detail h4 {
     color: var(--text-color) !important;
