@@ -27,7 +27,7 @@ languages:
         subtitle: "Construyo cosas para la web"
         content: "Una desarrolladora apasionada de aplicaciones web. Tiendo a hacer uso de tecnologías web modernas para construir sitios web que se ven geniales, se sienten fantásticos y funcionan correctamente."
         button:
-          name: "Currículum"
+          name: "Ver proyectos"
       about:
         title: "Sobre Mí"
         content: |-
@@ -223,7 +223,7 @@ languages:
         subtitle: "Je construis des choses pour le web"
         content: "Une développeuse passionnée d'applications web. J'ai tendance à utiliser des technologies web modernes pour créer des sites web qui ont fière allure, qui sont agréables et qui fonctionnent correctement."
         button:
-          name: "CV"
+          name: "Voir les projets"
       about:
         title: "À Propos de Moi"
         content: |-
@@ -537,9 +537,9 @@ params:
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
-      name: "Resume"
-      url: "#"
-      download: true
+      name: "프로젝트 보기"
+      url: "#projects"
+      download: false
       newPage: false
     socialLinks:
       fontAwesomeIcons:
@@ -767,5 +767,10 @@ params:
     articleList: "Jan 2, 2006"
     articleRecent: "Jan 2, 2006"
 
-  #customScripts: -| # You can add custom scripts which will be added before </body> tag
-  #  <script type="text/javascript"><!-- any script here --></script>
+  customScripts: |
+    <script>
+      const heroProjectButton = document.querySelector('#hero a.btn[href="#projects"]');
+      if (heroProjectButton) {
+        heroProjectButton.setAttribute('target', '_self');
+      }
+    </script>
