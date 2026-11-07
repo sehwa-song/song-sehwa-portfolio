@@ -553,28 +553,41 @@ params:
     enable: true
     title: "자기소개"
     image: ""
-    content: |-
-      안녕하세요. 전북대학교 컴퓨터인공지능학부 4학년 송세화입니다. 캡스톤 프로젝트 A2A Agent Company의 웹 애플리케이션 및 데모 개발을 담당하고 있으며, 모두의 창업 참여 프로젝트인 TripPups의 서비스 개발에도 참여하고 있습니다.
+    headline: "웹서비스를 만들고, **AI로 가능성을 확장합니다.**"
+    summary: |-
+      전북대학교 컴퓨터인공지능학부 4학년 **송세화**입니다.
 
-      #### 관심 분야와 선택 이유
-
-      웹서비스 개발, AI 기반 서비스, 풀스택 개발에 관심이 있습니다. A2A Agent Company에서 React·Vite 프론트엔드와 FastAPI 백엔드를 활용하며 화면과 API·데이터베이스·인증을 연결하는 개발을 경험했습니다. 이 경험을 바탕으로 각 구성 요소를 하나의 웹서비스로 연결하는 풀스택 개발 역량을 키우고, 이를 AI 기반 서비스 개발에 적용하고자 합니다.
-
-      #### 학습 목표와 실행 계획
-
-      학습 목표는 프론트엔드와 백엔드를 연결하는 웹서비스 개발 역량을 강화하는 것입니다.
-
-      **현재까지 수행한 활동:** A2A 프로젝트에서 회원가입·로그인, JWT 인증, 전자문서 업로드·목록 조회·다운로드 기능을 구현했습니다. FastAPI Swagger UI로 API를 테스트하고, 보호 API 호출 중 발생한 HTTP 401 오류는 토큰 발급 상태와 Authorize 설정을 확인한 뒤 올바른 토큰을 적용해 정상 호출을 확인했습니다.
-
-      **앞으로의 실행 계획:** 실제 프로젝트의 기능 구현과 개선을 이어가고 API 테스트를 반복하겠습니다. GitHub에 개발 과정과 오류 원인·해결 내용을 기록하며 웹서비스 개발 및 오류 개선 경험을 축적하겠습니다.
+      **A2A Agent Company** 웹 애플리케이션·데모 개발 · **TripPups** 서비스 개발 참여
+    sections:
+      - title: "관심 분야와 선택 이유"
+        description: "A2A에서 **React·Vite와 FastAPI**를 연결하며 화면·API·DB·인증을 함께 다뤘습니다. 이 경험을 바탕으로 **풀스택 개발** 역량을 키우고, **AI 기반 서비스**로 확장하고자 합니다."
+        keywords:
+          - "웹서비스 개발"
+          - "AI 기반 서비스"
+          - "풀스택 개발"
+      - title: "학습 목표와 실행 계획"
+        description: "**프론트엔드와 백엔드를 연결하는 웹서비스 개발 역량**을 강화합니다."
+        steps:
+          - label: "수행한 활동"
+            description: "회원가입·로그인, JWT 인증, 전자문서 업로드·목록·다운로드 구현. Swagger UI로 API 검증, 토큰·Authorize 설정 점검으로 **HTTP 401 해결**."
+          - label: "앞으로의 계획"
+            description: "프로젝트 **기능 구현·개선** · **API 테스트 반복** · **GitHub에 개발 과정과 오류 원인·해결 기록**"
     skills:
       enable: true
-      title: "기술 역량과 프로젝트 적용 사례입니다:"
+      title: "기술 역량과 프로젝트 경험"
       items:
-        - "**React·Vite:** A2A Agent Company 프론트엔드 구현"
-        - "**FastAPI·SQLite:** 회원 정보 관리 API 및 데이터베이스 구현"
-        - "**JWT:** 로그인 및 보호 API 인증 구현"
-        - "**Git·GitHub:** 프로젝트 코드 관리"
+        - name: "React · Vite"
+          role: "프론트엔드 개발"
+          experience: "A2A 웹 애플리케이션·데모 화면 구현"
+        - name: "FastAPI · SQLite"
+          role: "API 및 데이터베이스"
+          experience: "회원 정보 관리 API와 데이터베이스 구현"
+        - name: "JWT"
+          role: "로그인 및 인증"
+          experience: "로그인 토큰 발급과 보호 API 인증"
+        - name: "Git · GitHub"
+          role: "버전 관리"
+          experience: "프로젝트 코드와 변경 이력 관리"
 
   # Experience
   experience:

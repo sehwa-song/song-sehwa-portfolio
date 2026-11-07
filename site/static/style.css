@@ -82,3 +82,182 @@ h1, h2, h3, h4, h5, h6 {
         transition: none;
     }
 }
+
+/* About: scoped colors and layout leave the rest of the portfolio unchanged. */
+#about {
+    --about-accent: #2563c9;
+    --about-muted: #596575;
+    --about-card: rgba(255, 255, 255, 0.6);
+    --about-border: rgba(78, 106, 146, 0.18);
+    --about-tint: rgba(37, 99, 201, 0.07);
+}
+
+body.dark #about {
+    --about-accent: #83b8ff;
+    --about-muted: #aab6c6;
+    --about-card: rgba(255, 255, 255, 0.035);
+    --about-border: rgba(148, 180, 225, 0.18);
+    --about-tint: rgba(131, 184, 255, 0.08);
+}
+
+#about .about-shell {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+#about .about-eyebrow {
+    margin: 0 0 1rem;
+    color: var(--about-accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+#about .about-headline {
+    margin: 0 0 1.5rem;
+    max-width: 850px;
+    color: var(--text-color);
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+}
+
+#about .about-shell strong {
+    color: var(--about-accent);
+    font-weight: 600;
+}
+
+#about .about-headline strong {
+    font-weight: 700;
+}
+
+#about .about-summary,
+#about .about-description,
+#about .about-steps dd {
+    color: var(--about-muted);
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+#about .about-summary p {
+    margin: 0.35rem 0;
+}
+
+#about .about-topics {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+#about .about-topic,
+#about .about-skills {
+    min-width: 0;
+    border-top: 1px solid var(--about-border);
+    padding-top: 1.5rem;
+}
+
+#about .about-topic h3,
+#about .about-skills > h3 {
+    margin: 0 0 1rem;
+    color: var(--text-color) !important;
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+#about .about-description p {
+    margin: 0;
+}
+
+#about .about-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    overflow: visible;
+    list-style: none;
+}
+
+#about .about-keywords li {
+    position: static;
+    margin: 0;
+    padding: 0.375rem 0.625rem;
+    border: 1px solid var(--about-border);
+    border-radius: 999px;
+    background: var(--about-tint);
+    color: var(--about-accent);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+#about .about-keywords li::before {
+    content: none;
+}
+
+#about .about-steps {
+    margin: 1.25rem 0 0;
+}
+
+#about .about-step + .about-step {
+    margin-top: 1.25rem;
+}
+
+#about .about-steps dt {
+    margin-bottom: 0.375rem;
+    color: var(--about-accent);
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+#about .about-steps dd {
+    margin: 0;
+    font-size: 0.9375rem;
+}
+
+#about .about-skills {
+    margin-top: 3rem;
+}
+
+#about .about-skills-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+}
+
+#about .about-skill-card {
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--about-border);
+    border-radius: 1.25rem;
+    background: var(--about-card);
+}
+
+#about .about-skill-card h4 {
+    margin: 0 0 0.625rem;
+    color: var(--about-accent);
+    font-size: 1.125rem;
+    line-height: 1.4;
+}
+
+#about .about-skill-role {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#about .about-skill-experience {
+    margin: 0.625rem 0 0;
+    color: var(--about-muted);
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+    #about .about-topics,
+    #about .about-skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

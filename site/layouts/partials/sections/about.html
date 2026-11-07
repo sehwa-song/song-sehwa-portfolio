@@ -1,0 +1,55 @@
+{{ if .Site.Params.about.enable | default false }}
+{{ $about := .Site.Params.about }}
+<section id="about" class="py-0 py-sm-5" aria-labelledby="about-headline">
+    <div class="container">
+        <div class="about-shell">
+            <header class="about-intro">
+                <p class="about-eyebrow">{{ $about.title | default (i18n "about") }}</p>
+                <h2 id="about-headline" class="about-headline">{{ $about.headline | markdownify }}</h2>
+                <div class="about-summary">{{ $about.summary | markdownify }}</div>
+            </header>
+
+            <div class="about-topics">
+                {{ range $about.sections }}
+                <article class="about-topic">
+                    <h3>{{ .title }}</h3>
+                    <div class="about-description">{{ .description | markdownify }}</div>
+                    {{ with .keywords }}
+                    <ul class="about-keywords" aria-label="관심 분야">
+                        {{ range . }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                    {{ with .steps }}
+                    <dl class="about-steps">
+                        {{ range . }}
+                        <div class="about-step">
+                            <dt>{{ .label }}</dt>
+                            <dd>{{ .description | markdownify }}</dd>
+                        </div>
+                        {{ end }}
+                    </dl>
+                    {{ end }}
+                </article>
+                {{ end }}
+            </div>
+
+            {{ if $about.skills.enable }}
+            <section class="about-skills" aria-labelledby="about-skills-title">
+                <h3 id="about-skills-title">{{ $about.skills.title }}</h3>
+                <div class="about-skills-grid">
+                    {{ range $about.skills.items }}
+                    <article class="about-skill-card">
+                        <h4>{{ .name }}</h4>
+                        <p class="about-skill-role">{{ .role }}</p>
+                        <p class="about-skill-experience">{{ .experience }}</p>
+                    </article>
+                    {{ end }}
+                </div>
+            </section>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
