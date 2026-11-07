@@ -697,6 +697,9 @@ params:
           담당 범위: React 프론트엔드, FastAPI 백엔드, API·DB·인증 연동.
           구현한 기능: 회원가입·로그인, JWT 인증, 전자문서 업로드·조회.
         image: /images/hero.svg
+        featured:
+          name: "상세 보기"
+          link: "/song-sehwa-portfolio/projects/a2a-agent-company/"
         badges:
           - "React"
           - "Vite"
