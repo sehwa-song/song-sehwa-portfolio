@@ -1,292 +1,183 @@
-[bep]: https://github.com/bep
-[bugs]: https://github.com/gohugoio/hugo/issues?q=is%3Aopen+is%3Aissue+label%3ABug
-[contributing]: CONTRIBUTING.md
-[create a proposal]: https://github.com/gohugoio/hugo/issues/new?labels=Proposal%2C+NeedsTriage&template=feature_request.md
-[documentation repository]: https://github.com/gohugoio/hugoDocs
-[documentation]: https://gohugo.io/documentation
-[dragonfly bsd, freebsd, netbsd, and openbsd]: https://gohugo.io/installation/bsd
-[forum]: https://discourse.gohugo.io
-[friends]: https://github.com/gohugoio/hugo/graphs/contributors
-[go]: https://go.dev/
-[hugo modules]: https://gohugo.io/hugo-modules/
-[installation]: https://gohugo.io/installation
-[issue queue]: https://github.com/gohugoio/hugo/issues
-[linux]: https://gohugo.io/installation/linux
-[macos]: https://gohugo.io/installation/macos
-[prebuilt binary]: https://github.com/gohugoio/hugo/releases/latest
-[requesting help]: https://discourse.gohugo.io/t/requesting-help/9132
-[spf13]: https://github.com/spf13
-[static site generator]: https://en.wikipedia.org/wiki/Static_site_generator
-[support]: https://discourse.gohugo.io
-[themes]: https://themes.gohugo.io/
-[twitter]: https://twitter.com/gohugoio
-[website]: https://gohugo.io
-[windows]: https://gohugo.io/installation/windows
+# 송세화 개발 포트폴리오
 
-<a href="https://gohugo.io/"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/static/images/hugo-logo-wide.svg?sanitize=true" alt="Hugo" width="565"></a>
+웹서비스 및 AI 기반 서비스 개발 경험을 소개하는 개인 포트폴리오입니다. Hugo Profile 테마를 기반으로 제작한 정적 웹사이트이며, 실제 사이트 소스는 `site/`에 있습니다.
 
-A fast and flexible static site generator built with love by [bep], [spf13], and [friends] in [Go].
+**배포 주소:** [송세화 개발 포트폴리오](https://sehwa-song.github.io/song-sehwa-portfolio/)
 
----
+## 목차
 
-[![GoDoc](https://godoc.org/github.com/gohugoio/hugo?status.svg)](https://godoc.org/github.com/gohugoio/hugo)
-[![Tests on Linux, MacOS and Windows](https://github.com/gohugoio/hugo/workflows/Test/badge.svg)](https://github.com/gohugoio/hugo/actions?query=workflow%3ATest)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gohugoio/hugo)](https://goreportcard.com/report/github.com/gohugoio/hugo)
+각 절에는 보고서에서 직접 연결할 수 있는 고정 앵커를 지정했습니다.
 
-[Website] | [Installation] | [Documentation] | [Support] | [Contributing] | <a rel="me" href="https://fosstodon.org/@gohugoio">Mastodon</a>
+- [프로젝트 소개](#project-overview)
+- [주요 콘텐츠](#main-content)
+- [사용 기술](#tech-stack)
+- [프로젝트 구조](#project-structure)
+- [설치 및 실행 방법](#installation-and-run)
+- [배포 방법](#deployment)
+- [디자인 및 참고 자료](#design-references)
+- [라이선스 및 출처](#license-and-attribution)
 
-## Overview
+<a id="project-overview"></a>
 
-Hugo is a [static site generator] written in [Go], optimized for speed and designed for flexibility. With its advanced templating system and fast asset pipelines, Hugo renders a complete site in seconds, often less.
+## 1. 프로젝트 소개
 
-Due to its flexible framework, multilingual support, and powerful taxonomy system, Hugo is widely used to create:
+| 항목 | 내용 |
+| --- | --- |
+| 프로젝트명 | 송세화 개발 포트폴리오 |
+| 제작 목적 | 웹서비스 및 AI 기반 서비스 개발 경험 소개 |
+| 제작 방식 | Hugo Profile 테마 기반 정적 포트폴리오 |
+| 소유자 | 전북대학교 컴퓨터인공지능학부 송세화 |
+| 배포 환경 | GitHub Actions · GitHub Pages |
+| 공개 사이트 | [sehwa-song.github.io/song-sehwa-portfolio](https://sehwa-song.github.io/song-sehwa-portfolio/) |
 
-- Corporate, government, nonprofit, education, news, event, and project sites
-- Documentation sites
-- Image portfolios
-- Landing pages
-- Business, professional, and personal blogs
-- Resumes and CVs
+프로젝트에서 직접 수행한 역할, 구현 경험, 검증 과정과 향후 개선 방향을 정리합니다. 개발 중인 내용과 구현·검증한 내용을 구분하며, 전체 A2A 에이전트 연동 및 E2E 통합을 완료된 성과로 표현하지 않습니다.
 
-Use Hugo's embedded web server during development to instantly see changes to content, structure, behavior, and presentation. Then deploy the site to your host, or push changes to your Git provider for automated builds and deployment.
+<a id="main-content"></a>
 
-Hugo's fast asset pipelines include:
+## 2. 주요 콘텐츠
 
-- CSS bundling &ndash; transpilation (Sass), tree shaking, minification, source maps, SRI hashing, and PostCSS integration
-- JavaScript bundling &ndash; transpilation (TypeScript, JSX), tree shaking, minification, source maps, and SRI hashing
-- Image processing &ndash; convert, resize, crop, rotate,  adjust colors, apply filters, overlay text and images, and extract EXIF data
+| 영역 | 소개 내용 |
+| --- | --- |
+| 자기소개 및 관심 분야 | 웹서비스 개발, AI 기반 서비스, 풀스택 개발에 대한 관심과 학습 목표·실행 계획 |
+| 학력 및 기술 스택 | 전북대학교 컴퓨터인공지능학부 4학년 재학 정보와 실제 기술 적용 경험 |
+| A2A Agent Company | 산학협력 캡스톤 프로젝트의 웹 애플리케이션·데모 개발 경험 |
+| TripPups | 강원도 관광 중심의 스와이프형 여행 플랫폼 개발 참여와 모두의 창업 2차 진출 |
+| 프로젝트 상세 페이지 | 프로젝트 개요, 역할, 진행 상태, 구현·검증 경험 및 활동 사진 |
 
-And with [Hugo Modules], you can share content, assets, data, translations, themes, templates, and configuration with other projects via public or private Git repositories.
+프로젝트별 원문과 공개 페이지는 다음과 같습니다.
 
-## Sponsors
+- **A2A Agent Company:** [상세 문서](content/a2a-agent-company/index.md) · [공개 상세 페이지](https://sehwa-song.github.io/song-sehwa-portfolio/projects/a2a-agent-company/)
+- **TripPups:** [상세 문서](content/trippups/index.md) · [공개 상세 페이지](https://sehwa-song.github.io/song-sehwa-portfolio/projects/trippups/)
 
-<p>&nbsp;</p>
-<p float="left">
-  <a href="https://www.linode.com/?utm_campaign=hugosponsor&utm_medium=banner&utm_source=hugogithub" target="_blank"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/assets/images/sponsors/linode-logo_standard_light_medium.png" width="200" alt="Linode"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://cloudcannon.com/hugo-cms/?utm_campaign=HugoSponsorship&utm_source=sponsor&utm_content=gohugo" target="_blank"><img src="https://raw.githubusercontent.com/gohugoio/gohugoioTheme/master/assets/images/sponsors/cloudcannon-blue.svg" width="220" alt="CloudCannon"></a>
-<p>&nbsp;</p>
+두 프로젝트 모두 개발 진행 중이며, 확인되지 않은 기능을 완료된 기능으로 소개하지 않습니다.
 
-## Installation
+<a id="tech-stack"></a>
 
-Install Hugo from a [prebuilt binary], package manager, or package repository. Please see the installation instructions for your operating system:
+## 3. 사용 기술
 
-- [macOS]
-- [Linux]
-- [Windows]
-- [DragonFly BSD, FreeBSD, NetBSD, and OpenBSD]
+### 포트폴리오 사이트 구현 및 운영
 
-## Build from source
+| 기술 | 용도 |
+| --- | --- |
+| Hugo v0.169.0 Extended | 확인된 로컬 개발 환경의 정적 사이트 생성기 |
+| HTML · CSS · JavaScript | 테마 템플릿, 사이트 스타일 및 인터랙션 |
+| Markdown · YAML | 프로젝트 상세 콘텐츠 및 사이트 설정 |
+| Git · GitHub | 소스 버전 관리 및 저장소 운영 |
+| GitHub Actions · GitHub Pages | 자동 빌드 및 정적 사이트 배포 |
 
-Hugo is available in two editions: standard and extended. With the extended edition you can:
+현재 배포 워크플로는 **Hugo Extended v0.143.0**을 사용합니다. 로컬에서 확인한 버전과 배포 환경의 버전을 구분합니다.
 
-- Encode to the WebP format when processing images. You can decode WebP images with either edition.
-- Transpile Sass to CSS using the embedded LibSass transpiler. The extended edition is not required to use the Dart Sass transpiler.
+### 소개하는 프로젝트의 기술
 
-Prerequisites to build Hugo from source:
+**React · Vite · FastAPI · SQLite · JWT**는 A2A Agent Company에서 사용한 기술입니다. 포트폴리오 사이트 자체를 구현한 기술과 구분하며, 해당 프로젝트의 프론트엔드, API, 데이터베이스 및 인증 경험으로 소개합니다.
 
-- Standard edition: Go 1.19 or later
-- Extended edition: Go 1.19 or later, and GCC
+<a id="project-structure"></a>
 
-Build the standard edition:
+## 4. 프로젝트 구조
 
-```text
-go install github.com/gohugoio/hugo@latest
+아래 경로는 저장소 루트 `hugo-profile-master/`를 기준으로 합니다.
+
+| 경로 | 역할 |
+| --- | --- |
+| `site/README.md` | 포트폴리오 프로젝트 안내 문서 |
+| `site/hugo.yaml` | 사이트 정보, 자기소개 및 프로젝트 카드 등 설정 |
+| `site/pages.json` | 배포 주소 및 테마 등 병합 설정 |
+| `site/content/` | A2A Agent Company와 TripPups 등 Markdown 콘텐츠 |
+| `site/static/` | 프로필·프로젝트 이미지, CSS 등 정적 파일 |
+| `site/layouts/` | 헤더, 자기소개, 이미지 경로, 404 페이지 등의 테마 오버라이드 |
+| `site/themes/template/` | Hugo Profile 원본 테마 |
+| `.github/workflows/hugo-pages.yml` | GitHub Pages 자동 배포 워크플로 |
+| `.github/pages_build.py` | 배포 빌드 및 하위 경로 처리 스크립트 |
+| `exampleSite/` | 원본 예제 사이트 |
+
+실제 포트폴리오는 `site/`를 사용합니다. 원본 테마를 직접 수정하는 대신 사이트의 `layouts/`와 정적 CSS를 활용해 디자인과 경로 처리를 적용합니다.
+
+<a id="installation-and-run"></a>
+
+## 5. 설치 및 실행 방법
+
+저장소를 내려받은 뒤, 다음 명령은 모두 프로젝트 루트 **`hugo-profile-master/`**에서 실행합니다.
+
+### Hugo 설치
+
+macOS의 Homebrew 환경에서 설치합니다. 설치되는 버전은 실행 시점에 따라 달라질 수 있습니다.
+
+```sh
+brew install hugo
 ```
 
-Build the extended edition:
+### 버전 확인
 
-```text
-CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
+```sh
+hugo version
 ```
 
-## Documentation
+확인된 로컬 환경은 **Hugo v0.169.0 Extended**입니다.
 
-Hugo's [documentation] includes installation instructions, a quick start guide, conceptual explanations, reference information, and examples.
+### 로컬 서버 실행
 
-Please submit documentation issues and pull requests to the [documentation repository].
-
-## Support
-
-Please **do not use the issue queue** for questions or troubleshooting. Unless you are certain that your issue is a software defect, use the [forum].
-
-Hugo’s [forum] is an active community of users and developers who answer questions, share knowledge, and provide examples. A quick search of over 20,000 topics will often answer your question. Please be sure to read about [requesting help] before asking your first question.
-
-## Contributing
-
-You can contribute to the Hugo project by:
-
-- Answering questions on the [forum]
-- Improving the [documentation]
-- Monitoring the [issue queue]
-- Creating or improving [themes]
-- Squashing [bugs]
-
-Please submit documentation issues and pull requests to the [documentation repository].
-
-If you have an idea for an enhancement or new feature, create a new topic on the [forum] in the "Feature" category. This will help you to:
-
-- Determine if the capability already exists
-- Measure interest
-- Refine the concept
-
-If there is sufficient interest, [create a proposal]. Do not submit a pull request until the project lead accepts the proposal.
-
-For a complete guide to contributing to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
-
-## Dependencies
-
-Hugo stands on the shoulders of great open source libraries. Run `hugo env --logLevel info` to display a list of dependencies.
-
-<details>
-<summary>See current dependencies</summary>
-
-```text
-cloud.google.com/go/compute/metadata="v0.2.3"
-cloud.google.com/go/iam="v1.1.3"
-cloud.google.com/go/storage="v1.31.0"
-cloud.google.com/go="v0.110.8"
-github.com/Azure/azure-sdk-for-go/sdk/azcore="v1.7.0"
-github.com/Azure/azure-sdk-for-go/sdk/azidentity="v1.3.0"
-github.com/Azure/azure-sdk-for-go/sdk/internal="v1.3.0"
-github.com/Azure/azure-sdk-for-go/sdk/storage/azblob="v1.1.0"
-github.com/Azure/go-autorest/autorest/to="v0.4.0"
-github.com/AzureAD/microsoft-authentication-library-for-go="v1.0.0"
-github.com/BurntSushi/locker="v0.0.0-20171006230638-a6e239ea1c69"
-github.com/PuerkitoBio/purell="v1.1.1"
-github.com/PuerkitoBio/urlesc="v0.0.0-20170810143723-de5bf2ad4578"
-github.com/alecthomas/chroma/v2="v2.11.1"
-github.com/armon/go-radix="v1.0.0"
-github.com/aws/aws-sdk-go-v2/aws/protocol/eventstream="v1.4.11"
-github.com/aws/aws-sdk-go-v2/config="v1.18.32"
-github.com/aws/aws-sdk-go-v2/credentials="v1.13.31"
-github.com/aws/aws-sdk-go-v2/feature/ec2/imds="v1.13.7"
-github.com/aws/aws-sdk-go-v2/feature/s3/manager="v1.11.76"
-github.com/aws/aws-sdk-go-v2/internal/configsources="v1.1.37"
-github.com/aws/aws-sdk-go-v2/internal/endpoints/v2="v2.4.31"
-github.com/aws/aws-sdk-go-v2/internal/ini="v1.3.38"
-github.com/aws/aws-sdk-go-v2/internal/v4a="v1.1.0"
-github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding="v1.9.12"
-github.com/aws/aws-sdk-go-v2/service/internal/checksum="v1.1.32"
-github.com/aws/aws-sdk-go-v2/service/internal/presigned-url="v1.9.31"
-github.com/aws/aws-sdk-go-v2/service/internal/s3shared="v1.15.0"
-github.com/aws/aws-sdk-go-v2/service/s3="v1.38.1"
-github.com/aws/aws-sdk-go-v2/service/sso="v1.13.1"
-github.com/aws/aws-sdk-go-v2/service/ssooidc="v1.15.1"
-github.com/aws/aws-sdk-go-v2/service/sts="v1.21.1"
-github.com/aws/aws-sdk-go-v2="v1.20.0"
-github.com/aws/aws-sdk-go="v1.48.2"
-github.com/aws/smithy-go="v1.14.0"
-github.com/bep/clocks="v0.5.0"
-github.com/bep/debounce="v1.2.0"
-github.com/bep/gitmap="v1.1.2"
-github.com/bep/goat="v0.5.0"
-github.com/bep/godartsass/v2="v2.0.0"
-github.com/bep/godartsass="v1.2.0"
-github.com/bep/golibsass="v1.1.1"
-github.com/bep/gowebp="v0.3.0"
-github.com/bep/lazycache="v0.2.0"
-github.com/bep/logg="v0.3.0"
-github.com/bep/mclib="v1.20400.20402"
-github.com/bep/overlayfs="v0.6.0"
-github.com/bep/simplecobra="v0.3.2"
-github.com/bep/tmc="v0.5.1"
-github.com/clbanning/mxj/v2="v2.7.0"
-github.com/cli/safeexec="v1.0.1"
-github.com/cpuguy83/go-md2man/v2="v2.0.2"
-github.com/disintegration/gift="v1.2.1"
-github.com/dlclark/regexp2="v1.10.0"
-github.com/dustin/go-humanize="v1.0.1"
-github.com/evanw/esbuild="v0.19.7"
-github.com/fatih/color="v1.16.0"
-github.com/frankban/quicktest="v1.14.6"
-github.com/fsnotify/fsnotify="v1.7.0"
-github.com/getkin/kin-openapi="v0.120.0"
-github.com/ghodss/yaml="v1.0.0"
-github.com/go-openapi/jsonpointer="v0.19.6"
-github.com/go-openapi/swag="v0.22.4"
-github.com/gobuffalo/flect="v1.0.2"
-github.com/gobwas/glob="v0.2.3"
-github.com/gohugoio/go-i18n/v2="v2.1.3-0.20230805085216-e63c13218d0e"
-github.com/gohugoio/locales="v0.14.0"
-github.com/gohugoio/localescompressed="v1.0.1"
-github.com/golang-jwt/jwt/v4="v4.5.0"
-github.com/golang/groupcache="v0.0.0-20210331224755-41bb18bfe9da"
-github.com/golang/protobuf="v1.5.3"
-github.com/google/go-cmp="v0.6.0"
-github.com/google/s2a-go="v0.1.7"
-github.com/google/uuid="v1.4.0"
-github.com/google/wire="v0.5.0"
-github.com/googleapis/enterprise-certificate-proxy="v0.3.2"
-github.com/googleapis/gax-go/v2="v2.12.0"
-github.com/gorilla/websocket="v1.5.1"
-github.com/hairyhenderson/go-codeowners="v0.4.0"
-github.com/hashicorp/golang-lru/v2="v2.0.1"
-github.com/invopop/yaml="v0.2.0"
-github.com/jdkato/prose="v1.2.1"
-github.com/jmespath/go-jmespath="v0.4.0"
-github.com/josharian/intern="v1.0.0"
-github.com/kr/pretty="v0.3.1"
-github.com/kr/text="v0.2.0"
-github.com/kylelemons/godebug="v1.1.0"
-github.com/kyokomi/emoji/v2="v2.2.12"
-github.com/mailru/easyjson="v0.7.7"
-github.com/marekm4/color-extractor="v1.2.1"
-github.com/mattn/go-colorable="v0.1.13"
-github.com/mattn/go-isatty="v0.0.20"
-github.com/mattn/go-runewidth="v0.0.9"
-github.com/mitchellh/hashstructure="v1.1.0"
-github.com/mitchellh/mapstructure="v1.5.0"
-github.com/mohae/deepcopy="v0.0.0-20170929034955-c48cc78d4826"
-github.com/muesli/smartcrop="v0.3.0"
-github.com/niklasfasching/go-org="v1.7.0"
-github.com/olekukonko/tablewriter="v0.0.5"
-github.com/pelletier/go-toml/v2="v2.1.0"
-github.com/perimeterx/marshmallow="v1.1.5"
-github.com/pkg/browser="v0.0.0-20210911075715-681adbf594b8"
-github.com/pkg/errors="v0.9.1"
-github.com/rogpeppe/go-internal="v1.11.0"
-github.com/russross/blackfriday/v2="v2.1.0"
-github.com/rwcarlsen/goexif="v0.0.0-20190401172101-9e8deecbddbd"
-github.com/sanity-io/litter="v1.5.5"
-github.com/sass/dart-sass/compiler="1.63.2"
-github.com/sass/dart-sass/implementation="1.63.2"
-github.com/sass/dart-sass/protocol="2.0.0"
-github.com/sass/libsass="3.6.5"
-github.com/spf13/afero="v1.10.0"
-github.com/spf13/cast="v1.5.1"
-github.com/spf13/cobra="v1.7.0"
-github.com/spf13/fsync="v0.9.0"
-github.com/spf13/pflag="v1.0.5"
-github.com/tdewolff/minify/v2="v2.20.7"
-github.com/tdewolff/parse/v2="v2.7.5"
-github.com/webmproject/libwebp="v1.3.2"
-github.com/yuin/goldmark-emoji="v1.0.2"
-github.com/yuin/goldmark="v1.6.0"
-go.opencensus.io="v0.24.0"
-go.uber.org/atomic="v1.11.0"
-go.uber.org/automaxprocs="v1.5.3"
-gocloud.dev="v0.34.0"
-golang.org/x/crypto="v0.15.0"
-golang.org/x/exp="v0.0.0-20221031165847-c99f073a8326"
-golang.org/x/image="v0.13.0"
-golang.org/x/mod="v0.14.0"
-golang.org/x/net="v0.18.0"
-golang.org/x/oauth2="v0.13.0"
-golang.org/x/sync="v0.5.0"
-golang.org/x/sys="v0.14.0"
-golang.org/x/text="v0.14.0"
-golang.org/x/time="v0.3.0"
-golang.org/x/tools="v0.15.0"
-golang.org/x/xerrors="v0.0.0-20220907171357-04be3eba64a2"
-google.golang.org/api="v0.151.0"
-google.golang.org/genproto/googleapis/api="v0.0.0-20231016165738-49dd2c1f3d0b"
-google.golang.org/genproto/googleapis/rpc="v0.0.0-20231030173426-d783a09b4405"
-google.golang.org/genproto="v0.0.0-20231016165738-49dd2c1f3d0b"
-google.golang.org/grpc="v1.59.0"
-google.golang.org/protobuf="v1.31.0"
-gopkg.in/yaml.v2="v2.4.0"
-gopkg.in/yaml.v3="v3.0.1"
-howett.net/plist="v1.0.0"
-software.sslmate.com/src/go-pkcs12="v0.2.0"
+```sh
+hugo server --source site --config hugo.yaml,pages.json --baseURL http://localhost:1314/song-sehwa-portfolio/ --port 1314
 ```
-</details>
+
+브라우저에서 [로컬 포트폴리오](http://localhost:1314/song-sehwa-portfolio/)에 접속합니다. 서버 종료는 실행한 터미널에서 `Ctrl+C`를 누릅니다.
+
+### 사이트 빌드
+
+```sh
+hugo --source site --config hugo.yaml,pages.json
+```
+
+기본 빌드 결과는 `site/public/`에 생성됩니다. 위 명령은 `hugo.yaml`과 `pages.json`을 함께 읽으며, `pages.json`의 배포 주소 설정을 반영합니다. 로컬 서버에서는 명령의 `--baseURL`로 로컬 주소와 하위 경로를 지정합니다.
+
+<a id="deployment"></a>
+
+## 6. 배포 방법
+
+1. 변경 사항을 저장소의 `main` 브랜치에 push하면 GitHub Actions가 실행됩니다.
+2. 워크플로가 의존성을 준비하고 Hugo 사이트를 빌드합니다.
+3. 빌드 스크립트가 GitHub Pages의 배포 주소와 하위 경로를 처리하고 결과물을 생성합니다.
+4. 생성된 결과물을 GitHub Pages에 배포합니다.
+5. GitHub 저장소의 **Actions**에서 빌드·배포 성공 여부를 확인하고, [공개 사이트](https://sehwa-song.github.io/song-sehwa-portfolio/)에서 변경 사항과 이미지·내부 링크를 확인합니다.
+
+관련 파일은 [배포 워크플로](../.github/workflows/hugo-pages.yml)와 [빌드 스크립트](../.github/pages_build.py)입니다. 워크플로는 수동 실행도 지원하며, 배포 빌드 결과는 저장소 루트의 `public/`에 생성됩니다.
+
+공개 사이트는 `/song-sehwa-portfolio/` 하위 경로를 사용합니다. 로컬 실행과 배포 결과를 확인할 때 메인 화면뿐 아니라 두 프로젝트 상세 페이지와 이미지 경로도 함께 확인합니다.
+
+<a id="design-references"></a>
+
+## 7. 디자인 및 참고 자료
+
+| 자료 | 활용 방식 |
+| --- | --- |
+| [Hugo Profile](https://github.com/gurusabarish/hugo-profile) | 정적 포트폴리오의 기본 테마와 레이아웃 |
+| [Perry Wang 포트폴리오](https://www.perryw.ca/) | 미니멀한 다크 UI와 타이포그래피의 디자인 참고 |
+
+Hugo Profile의 기본 구조를 활용하면서 시스템 산세리프 글꼴, 은은한 Hero 그라데이션, 자기소개 구성, 미니멀한 헤더 브랜드 등을 개인 포트폴리오에 맞게 조정했습니다.
+
+Perry Wang 포트폴리오의 미니멀한 다크 UI와 타이포그래피 분위기를 참고하되, 실제 구성과 표현은 개인 개발자 포트폴리오에 맞게 독자적으로 각색했습니다.
+
+<a id="license-and-attribution"></a>
+
+## 8. 라이선스 및 출처
+
+### Hugo Profile 테마
+
+- 원본: [gurusabarish/hugo-profile](https://github.com/gurusabarish/hugo-profile)
+- 확인한 라이선스: **MIT License**
+- 저작권 표시: **Copyright (c) 2021 GURU SABARISH**
+- 라이선스 원문: [테마 LICENSE](themes/template/LICENSE)
+
+테마를 복제하거나 상당 부분을 포함해 배포할 때는 원본 라이선스에 명시된 저작권 및 허가 고지를 유지합니다. 기존 테마의 출처와 라이선스 파일을 보존합니다.
+
+### 직접 작성한 콘텐츠와 사진
+
+자기소개, 프로젝트 경험 및 상세 설명은 송세화의 실제 활동을 정리한 개인 콘텐츠입니다. 제공된 실제 프로필 사진과 프로젝트 활동 사진은 개인 활동 자료로 구분합니다. 직접 촬영하거나 사용 권한을 가진 사진은 개인 콘텐츠로 관리하며, 개별 사진의 촬영자나 별도 이용 조건은 확인 없이 추가하지 않습니다.
+
+외부 테마의 MIT 라이선스를 개인 소개 글이나 사진 전체의 이용 허가로 간주하지 않습니다.
+
+### 기타 포함 자료
+
+`site/LICENSE`에는 Apache License 2.0 문서가 남아 있습니다. 이는 위에서 확인한 Hugo Profile 테마의 MIT 라이선스와 별개의 파일이며, 이 문서만을 근거로 모든 콘텐츠의 라이선스를 동일하게 지정하지 않습니다.
+
+외부 테마·참고 자료와 직접 작성한 콘텐츠를 구분하고, 개별 자료의 확인되지 않은 이미지 출처나 라이선스 조건은 임의로 기재하지 않습니다.
