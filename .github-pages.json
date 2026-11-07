@@ -1,0 +1,13 @@
+{
+  "config": "hugo.yaml,pages.json",
+  "theme": "template",
+  "sample": "exampleSite",
+  "version": "0.143.0",
+  "slug": "hugo-profile",
+  "npm": [],
+  "asset_build": [],
+  "generator": "3.1",
+  "repo": "https://github.com/sehwa-song/song-sehwa-portfolio.git",
+  "baseURL": "https://sehwa-song.github.io/song-sehwa-portfolio/",
+  "audited": false
+}
