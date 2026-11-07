@@ -309,3 +309,55 @@ footer .portfolio-copyright {
 footer .portfolio-copyright p {
     margin: 0;
 }
+
+/* Project hover accents do not change card or image geometry. */
+#projects {
+    --project-hover-border: rgba(111, 145, 181, 0.48);
+    --project-hover-shadow: rgba(49, 75, 105, 0.09);
+}
+
+body.dark #projects {
+    --project-hover-border: rgba(149, 177, 211, 0.5);
+    --project-hover-shadow: rgba(72, 112, 166, 0.12);
+}
+
+#projects .card,
+#projects .card:hover {
+    transform: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.25s ease;
+}
+
+#projects .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    pointer-events: none;
+    transition: border-color 0.25s ease;
+}
+
+#projects .card .card-img-top,
+#projects .card:hover .card-img-top {
+    transform: none;
+    transition: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #projects .card:hover {
+        box-shadow: 0 4px 16px var(--project-hover-shadow);
+    }
+
+    #projects .card:hover::after {
+        border-color: var(--project-hover-border);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #projects .card,
+    #projects .card:hover,
+    #projects .card::after {
+        transition: none;
+    }
+}
